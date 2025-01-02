@@ -1,0 +1,257 @@
+/* General Styles */
+.logo img {
+  width: 65px;
+  display: flex;
+  margin-bottom: 7px;
+}
+
+
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  border-radius: 10px;
+  border-bottom-left-radius: 227px;
+  background-image: linear-gradient(to right, #958b98 0%, #000 100%); 
+  box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbar-container:hover {
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  max-height: 0;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.navbar-toggle:hover {
+  transform: rotate(90deg);
+}
+
+.navbar.open {
+  width: 250px;
+  height: 202px;
+  position: relative;
+  right: 0;
+  opacity: 1;
+  max-height: 500px; /* Adjust as needed */
+}
+
+.navbar-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 28px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-items li {
+  padding: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-items li:hover {
+  color: #ff0000;
+}
+
+.navbar-items li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-items li a:hover {
+  color: #0d6efd;
+}
+
+.navbar.open .navbar-items {
+  transform: translateX(0);
+}
+
+/* Icon positioning */
+.item-1 {
+  flex: none;
+  height: 22px;
+  position: absolute;
+  right: 20px;
+  top: -10px;
+  width: 154px;
+  z-index: 1;
+}
+
+.item-2 {
+  flex: none;
+  height: 22px;
+  position: absolute;
+  right: -4px;
+  top: 24px;
+  width: 154px;
+  z-index: 1;
+  transform: rotate(-15deg);
+}
+
+.item-3 {
+  flex: none;
+  height: 22px;
+  position: absolute;
+  right: -27px;
+  top: 67px;
+  width: 154px;
+  z-index: 1;
+  transform: rotate(-50deg);
+}
+
+.item-4 {
+  flex: none;
+  height: 22px;
+  position: absolute;
+  right: -73px;
+  top: 99px;
+  width: 154px;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+
+.instaIcon {
+  position: absolute;
+  right: 142px;
+  top: 19px;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.instaIcon:hover {
+  transform: scale(1.2);
+}
+
+.xIcon {
+  position: absolute;
+  right: 144px;
+  top: 10px;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.xIcon:hover {
+  transform: scale(1.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  /* Adjust navbar width for tablets */
+  .navbar-container {
+    border-bottom-left-radius: 227px;
+  }
+
+  .navbar.open {
+    width: 220px;
+    height: 180px;
+  }
+
+  .navbar-items li {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .instaIcon, .xIcon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust navbar width for mobile devices */
+  .navbar-container {
+    border-bottom-left-radius: 227px;
+  }
+
+  .navbar-toggle {
+    font-size: 1.2rem; /* Slightly smaller for mobile */
+  }
+
+  .navbar.open {
+    width: 215px;
+    height: 170px;
+  }
+
+  /* Reduce the size of items to keep positions similar on smaller screens */
+  .navbar-items li {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust icon sizes slightly */
+  .instaIcon, .xIcon {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for small mobile screens */
+
+  .navbar.open {
+    width: 219px;
+    height: 150px;
+  }
+
+  .navbar-items li {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .instaIcon, .xIcon {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Additional adjustments for very small screens */
+
+
+  .navbar.open {
+    width: 200px;
+    height: 130px;
+  }
+
+  .navbar-items li {
+    padding: 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .instaIcon, .xIcon {
+    font-size: 20px;
+  }
+}

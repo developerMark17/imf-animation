@@ -1,0 +1,201 @@
+#about{
+  margin-top: 120px;
+}
+.about-bg {
+  height: 100%;
+  background-color: #000000;
+  position: relative;
+  background-size: cover; /* Ensure the background image scales properly */
+  background-repeat: no-repeat;
+  background-position: top center; /* Make sure background stays centered */
+}
+/* About.css */
+.about-model {
+  width: 100%;
+  max-width: 400px; /* Set a max-width to contain the model */
+  height: 400px; /* Set a fixed height for the container */
+  margin: 0 auto; /* Center the model */
+  position: relative;
+}
+
+.centered-model {
+  margin: 0 auto; /* Keep model centered on smaller screens */
+}
+
+.about-bg::after {
+  content: "";
+  width: 100%;
+  height: 144px;
+  position: absolute;
+  top: 0; /* Align the top edge of the background */
+  left: 0;
+  background-size: cover; /* Ensure the SVG scales properly */
+  background-repeat: no-repeat;
+  background-position: top center;
+  transform: rotate(180deg);
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 1C19.5523 3 32.2291 5 51.5 9C104.5 19 200 43 300 65C400 88 500 111 600 102C700 93 800 53 900 30C987.526 5 1085.36 -1 1150 0C1169.54 -1 1180.49 0 1200 1V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V1.98128Z' fill='%23ffffff'/></svg>");
+}
+
+@media (max-width: 850px) {
+  .about-bg::before,
+  .about-bg::after {
+    height: 72px;
+  }
+}
+
+.aboutHeading,
+.serviceHeading {
+  margin-top: 62px;
+  font-size: 50px;
+}
+.aboutContent{
+  margin-top: 80px;
+  max-width: 600px;
+}
+
+.about-model {
+  margin-top: 50px;
+}
+
+.modelling,
+.animation,
+.design {
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .aboutHeading,
+  .serviceHeading {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  .about-model {
+    margin-top: 100px;
+  }
+
+  .centered-model {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-bg {
+ 
+    margin-top: 80px;
+    background-position: top center;
+  }
+
+  .aboutHeading,
+  .serviceHeading {
+    font-size: 35px;
+    margin-top: 50px;
+  }
+
+  .about-model {
+    margin-top: 50px;
+  }
+
+  .centered-model {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-bg {
+  
+    background-position: top center;
+  }
+
+  .aboutHeading,
+  .serviceHeading {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .about-model {
+    margin-top: 30px;
+  }
+
+  .centered-model {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+/* General styles for larger screens */
+@media (min-width: 1600px) {
+  
+
+  .aboutHeading,
+  .serviceHeading {
+    font-size: 60px; /* Increase heading font size */
+    margin-top: 80px;
+  }
+
+  .aboutContent {
+    max-width: 800px; /* Widen content */
+    font-size: 20px; /* Increase font size of content */
+  }
+
+  .about-model {
+    max-width: 500px;
+    height: 500px; /* Increase model dimensions */
+  }
+
+  .about-bg::after {
+    height: 220px; /* Increase SVG background height */
+  }
+}
+
+@media (min-width: 2600px) {
+  
+  .aboutHeading,
+  .serviceHeading {
+    font-size: 70px;
+    margin-top: 100px;
+  }
+
+  .aboutContent {
+    max-width: 900px;
+    font-size: 22px;
+  }
+
+  .about-model {
+    max-width: 550px;
+    height: 550px;
+  }
+
+  .about-bg::after {
+    height: 275px;
+  }
+}
+
+@media (min-width: 3100px) {
+
+
+  .aboutHeading,
+  .serviceHeading {
+    font-size: 80px;
+    margin-top: 120px;
+  }
+
+  .aboutContent {
+    max-width: 1000px;
+    font-size: 24px;
+  }
+
+  .about-model {
+    max-width: 650px;
+    height: 650px;
+  }
+
+  .about-bg::after {
+    height: 300px;
+  }
+}

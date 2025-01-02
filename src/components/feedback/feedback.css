@@ -1,0 +1,175 @@
+.feedback-container {
+  text-align: center;
+  position: relative;
+  /* overflow: hidden; */
+  width: 100%;
+  margin-top: 250px;
+}
+
+.feedback-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin-top: -200px;
+  z-index: 10;
+}
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  perspective: 1200px;
+  overflow: hidden;
+}
+.feedback-card {
+  position: absolute;
+  width: 600px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform-origin: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.feedback-card.center {
+  transform: scale(1) rotateY(0deg);
+  opacity: 1;
+  z-index: 3;
+}
+.feedback-card.left {
+  transform: translateX(-400px) scale(0.8) rotateY(15deg);
+  opacity: 0.7;
+  z-index: 2;
+  width: 600px;
+}
+.feedback-card.right {
+  transform: translateX(400px) scale(0.8) rotateY(-15deg);
+  opacity: 0.7;
+  z-index: 2;
+  width: 600px;
+}
+.feedback-card.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+  z-index: 1;
+}
+.feedback-quote {
+  font-size: 2rem;
+  color: red;
+}
+.feedback-text {
+  margin: 10px 0;
+}
+.author {
+  font-weight: bold;
+}
+.position,
+.company {
+  color: #999;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .feedback-card {
+    width: 90%;
+  }
+}
+@media (min-width: 1600px) {
+  .feedback-container {
+    padding: 40px;
+  }
+
+  .feedback-heading {
+    font-size: 2.5rem;
+    margin-top: -230px; /* Adjust for larger screen proportions */
+  }
+
+  .carousel-wrapper {
+    height: 400px; /* Increase height for carousel */
+  }
+
+  .feedback-card {
+    width: 700px; /* Make feedback cards wider */
+    padding: 20px 40px; /* Increase padding inside feedback cards */
+    font-size: 18px; /* Increase font size for better readability */
+  }
+
+  .feedback-card.left {
+    transform: translateX(-500px) scale(0.9) rotateY(15deg);
+  }
+
+  .feedback-card.right {
+    transform: translateX(500px) scale(0.9) rotateY(-15deg);
+  }
+
+  .buttons {
+    gap: 30px; /* Increase gap between buttons */
+  }
+}
+
+@media (min-width: 2600px) {
+  .feedback-heading {
+    font-size: 3rem;
+    margin-top: -210px;
+  }
+
+  .carousel-wrapper {
+    height: 500px;
+  }
+
+  .feedback-card {
+    width: 800px;
+    padding: 30px 50px;
+    font-size: 20px;
+  }
+
+  .feedback-card.left {
+    transform: translateX(-600px) scale(0.9) rotateY(15deg);
+  }
+
+  .feedback-card.right {
+    transform: translateX(600px) scale(0.9) rotateY(-15deg);
+  }
+
+  .buttons {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 3100px) {
+  .feedback-heading {
+    font-size: 3.5rem;
+    margin-top: -250px;
+  }
+
+  .carousel-wrapper {
+    height: 600px;
+  }
+
+  .feedback-card {
+    width: 900px;
+    padding: 40px 60px;
+    font-size: 22px;
+  }
+
+  .feedback-card.left {
+    transform: translateX(-700px) scale(0.9) rotateY(15deg);
+  }
+
+  .feedback-card.right {
+    transform: translateX(700px) scale(0.9) rotateY(-15deg);
+  }
+
+  .buttons {
+    gap: 50px;
+  }
+}
+
+
