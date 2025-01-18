@@ -86,6 +86,7 @@ export function About() {
 
   return (
     <div id="about">
+      
       <div className="about-bg">
         <div className="container text-center">
           <div className="row text-white">

@@ -7,6 +7,8 @@ import "./Work.css";
 import throttle from "lodash.throttle";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
+
 const Model = lazy(() => import("../Models/Model").then((module) => ({ default: module.Model })));
 const MemoizedModel = React.memo(({ modelUrl, hover, position, scale, initialRotation, setLoaded, setProgress }) => {
   const meshRef = useRef();
@@ -173,6 +175,7 @@ export default function Work() {
 
   return (
     <div>
+  
       <div className="container ">
         <div className="heading-container">
           <h5 className="card bg-black text-white border-0 heading">MY WORK</h5>

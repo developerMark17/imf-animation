@@ -1,9 +1,7 @@
 import { Contact } from "../contact/contact";
 import "../feedback/feedback.css";
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from "react";
-// import { Canvas } from "@react-three/fiber";
-// import { OrbitControls, Environment } from "@react-three/drei";
-// import { Model } from "../Models/Model";
+import { Helmet } from "react-helmet-async";
 
 const FeedbackCard = React.memo(({ feedback, author, position, company, positionClass }) => (
   <div className={`feedback-card ${positionClass}`}>
@@ -17,9 +15,6 @@ const FeedbackCard = React.memo(({ feedback, author, position, company, position
 
 export function Feedback() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const [cameraPosition] = useState([0, 0, 10]);
-  // const [robotPosition, setRobotPosition] = useState([-20, 0, 0]);
-  // const [animationStage, setAnimationStage] = useState("horizontal");
 
   const feedbackData = useMemo(() => [
     { feedback: "Great website for campers!", author: "Mark S", position: "Owner", company: "Camp Night" },
@@ -45,45 +40,12 @@ export function Feedback() {
     return "hidden";
   };
 
-  // useEffect(() => {
-  //   const maxHorizontal = window.innerWidth >= 1024 ? 20 : 10; // Wider range for larger screens
-  //   const interval = setInterval(() => {
-  //     setRobotPosition((prevPosition) => {
-  //       if (animationStage === "horizontal") {
-  //         if (prevPosition[0] >= maxHorizontal) {
-  //           setAnimationStage("vertical");
-  //           return [0, 10, 0]; // Move from top when going vertical
-  //         }
-  //         return [prevPosition[0] + 0.1, 0, 0];
-  //       } else if (animationStage === "vertical") {
-  //         if (prevPosition[1] <= -10) {
-  //           setAnimationStage("horizontal");
-  //           return [-maxHorizontal, 0, 0]; // Reset back to left edge
-  //         }
-  //         return [0, prevPosition[1] - 0.1, 0];
-  //       }
-  //       return prevPosition;
-  //     });
-  //   }, 10);
-
-  //   return () => clearInterval(interval);
-  // }, [animationStage]);
-
-  // const modelScale = useMemo(() => {
-  //   return window.innerWidth < 768 ? [15, 15, 15] : [30, 30, 30]; // Smaller scale for mobile
-  // }, []);
-
   return (
     <div id="feedback">
+   
       <div className="feedback-container">
         <div className="model">
-          {/* <Suspense fallback={<div>Loading model...</div>}>
-            <Canvas camera={{ position: cameraPosition, fov: 50 }} style={{ height: "500px" }}>
-              <Environment files="/image/brown_photostudio_01_2k.hdr" />
-              <OrbitControls enableZoom={false} enableRotate={false} enablePan={true} />
-              <Model url="/models/Robot/robot.gltf" scale={modelScale} position={robotPosition} />
-            </Canvas>
-          </Suspense> */}
+     
         </div>
         <h2 className="feedback-heading">Feedback</h2>
         <div className="carousel-wrapper">
